@@ -15,10 +15,16 @@ const App = () => {
     });
   };
 
+  const removeUserHandler = userId => {
+    setUsersList(prevState => {
+      return prevState.filter(user => user.id !== userId);
+    });
+  };
+
   return (
     <div>
       <AddUser onAddUser={addUserHandler} />
-      <UsersList users={usersList} />
+      <UsersList users={usersList} onRemoveUser={removeUserHandler} />
     </div>
   );
 };

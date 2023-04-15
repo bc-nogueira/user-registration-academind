@@ -4,13 +4,27 @@
   max-width: 40rem;
 }
 
-.users ul {
+.users div {
   list-style: none;
   padding: 1rem;
 }
 
-.users li {
+.users div div {
   border: 1px solid #ccc;
   margin: 0.5rem 0;
   padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete {
+  border: 1px solid #880808;
+  background: #880808;
+}
+
+.delete:hover,
+.delete:active {
+  background: #6E260E;
+  border-color: #6E260E;
 }
