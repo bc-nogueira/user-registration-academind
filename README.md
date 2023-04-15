@@ -8,8 +8,7 @@ I coded along during the course [React - The Complete Guide (incl Hooks, React R
 
 Everything included in the first commit is from the original project. All later commits are changes that I made to the project. These changes include:
 
-- [WIP] Delete user
-- [WIP] Edit user
+- Delete user :heavy_check_mark: (commit [a62412](https://github.com/bc-nogueira/user-registration-academind/commit/a62412fa130a02598e3628b6db98e72c9b097fe1))
 
 ## Check it in action
 
