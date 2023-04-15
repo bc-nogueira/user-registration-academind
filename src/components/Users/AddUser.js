@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 import Button from '../UI/Button';
 import Card from '../UI/Card';
@@ -9,6 +9,8 @@ const AddUser = props => {
   const [enteredUsername, setEnteredUsername] = useState('');
   const [enteredAge, setEnteredAge] = useState('');
   const [error, setError] = useState();
+
+  const inputRef = useRef(null);
 
   const usernameChangeHandler = event => {
     setEnteredUsername(event.target.value);
@@ -41,6 +43,7 @@ const AddUser = props => {
 
     setEnteredUsername('');
     setEnteredAge('');
+    inputRef.current.focus();
   };
 
   const errorHandler = () => {
@@ -64,6 +67,7 @@ const AddUser = props => {
             id="username"
             type="text"
             value={enteredUsername}
+            ref={inputRef}
             onChange={usernameChangeHandler}
           />
 
