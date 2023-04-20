@@ -8,17 +8,21 @@ const UsersList = props => {
   return (
     <Card className={classes.users}>
       <div>
-        {props.users.map(user => (
-          <div key={user.id}>
-            {user.username} ({user.age} years old)
-            <Button
-              className={classes.delete}
-              onClick={() => props.onRemoveUser(user.id)}
-            >
-              Delete
-            </Button>
-          </div>
-        ))}
+        {props.users.length > 0 ? (
+          props.users.map(user => (
+            <div key={user.id}>
+              {user.username} ({user.age} years old)
+              <Button
+                className={classes.delete}
+                onClick={() => props.onRemoveUser(user.id)}
+              >
+                Delete
+              </Button>
+            </div>
+          ))
+        ) : (
+          <p>No users found.</p>
+        )}
       </div>
     </Card>
   );
